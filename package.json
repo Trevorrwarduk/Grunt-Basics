@@ -1,0 +1,29 @@
+{
+  "name": "Grunt-basic-Install-for-JS-development",
+  "version": "1.0.0",
+  "description": "A basic grunt setup for enabling watch, lint and beautifier",
+  "main": "",
+  "directories": {
+    "doc": "",
+    "test": ""
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt-available-tasks": "^0.5.7",
+    "grunt-remove-calls": "0.0.6",
+    "grunt-jsdoc": "^0.5.7",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jsbeautifier": "^0.2.7"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC"
+}
