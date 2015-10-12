@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install Grunt
-npm install grunt-cli
+sudo npm install -g grunt-cli
 
 # Lets get the required packages for the grunt file
 # This will use the package.json file and install all neccesary node modules.
