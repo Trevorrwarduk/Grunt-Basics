@@ -1,0 +1,8 @@
+{
+	"--title": "unTward Example Documentation",
+	"--touch-examples": true,
+	"--welcome": "welcome.html",
+	"--footer": "copyright unTward 2015",
+	"--guides": "development.json",
+    "--head-html": "<link rel=\"stylesheet\" href=\"css.css\" type=\"text/css\" />"	
+}
