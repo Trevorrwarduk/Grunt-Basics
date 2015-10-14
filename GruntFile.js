@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                 files: ['**/*.js'],
                 options: {}
             },
-            one: {
+            single: {
                 files: {
                     src: 'GruntFile.js'
                 },
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
                     src: ['**/*.js']
                 }
             },
-            one: {
+            single: {
                 files: {
                     src: 'GruntFile.js'
                 }
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: ['GruntFile.js', '**/*.js'],
-                tasks: ['validatejsone', 'formatjsone', 'FileChange'],
+                tasks: ['validatejssingle', 'formatjssingle', 'FileChange'],
                 options: {
                     event: ['changed'],
 
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        availabletasks: {
+        taskslist: {
             tasks: {}
         }
     });
@@ -92,22 +92,22 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
 
 
-    grunt.registerTask('FileChange', 'The custom task for the watch event', function() {
-        grunt.log.writeln('Waiting for more changes ...');
+    grunt.registerTask('FileChange', 'The watch event', function() {
+        grunt.log.writeln('Waiting for changes ...');
     });
     grunt.registerTask('docs', ['jsduck', 'copy:docLayout', 'copy:docIcon', 'copy:docImage', 'copy:favicon']);
     grunt.registerTask('default', ['watchjs']);
     grunt.registerTask('validatejsmain', ['jshint:main']);
-    grunt.registerTask('validatejsone', ['jshint:one']);
+    grunt.registerTask('validatejssingle', ['jshint:single']);
     grunt.registerTask('formatjsmain', ['jsbeautifier:main']);
-    grunt.registerTask('formatjsone', ['jsbeautifier:one']);
+    grunt.registerTask('formatjssingle', ['jsbeautifier:single']);
     grunt.registerTask('watchjs', ['watch:js']);
-    grunt.registerTask('tasks', ['availabletasks']);
+    grunt.registerTask('tasks', ['tasklist']);
 
 
     // This captures the changed file for specific watch functions.
     grunt.event.on('watch', function(action, filepath, target) {
-        grunt.config('jshint.one.files.src', filepath);
-        grunt.config('jsbeautifier.one.files.src', filepath);
+        grunt.config('jshint.single.files.src', filepath);
+        grunt.config('jsbeautifier.single.files.src', filepath);
     });
 };
