@@ -79,7 +79,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        taskslist: {
+        availabletasks: {
             tasks: {}
         }
     });
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
     grunt.registerTask('formatjsmain', ['jsbeautifier:main']);
     grunt.registerTask('formatjssingle', ['jsbeautifier:single']);
     grunt.registerTask('watchjs', ['watch:js']);
-    grunt.registerTask('tasks', ['tasklist']);
+    grunt.registerTask('tasks', ['availabletasks']);
 
 
     // This captures the changed file for specific watch functions.
